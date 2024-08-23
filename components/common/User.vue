@@ -5,7 +5,7 @@
     </div>
     <div>
       <h4 class="text-dark font-medium text-xs">John Doe</h4>
-      <h4 class="text-dark-gray text-xs">johndoe@gmail.com</h4>
+      <p class="text-dark-gray text-xs">johndoe@gmail.com</p>
     </div>
     <Icon class="text-lg" name="mdi:chevron-down"></Icon>
   </div>

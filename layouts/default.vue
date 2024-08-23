@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="flex w-full relative">
     <div>
       <SideBar></SideBar>
     </div>
-    <div class="">
+    <div class="ml-60 relative w-full">
       <slot></slot>
     </div>
   </div>
