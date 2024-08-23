@@ -1,0 +1,10 @@
+# Ignore the Nuxt auto-generated folder
+.nuxt/
+
+# Ignore node_modules
+node_modules/
+
+# Ignore Git and build directories
+.git/
+dist/
+build/
