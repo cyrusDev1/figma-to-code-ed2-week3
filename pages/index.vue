@@ -1,8 +1,10 @@
 <template>
   <div class="">
-    <TopNav></TopNav>
+    <DashboardOverview></DashboardOverview>
+    <Market></Market>
   </div>
 </template>
 <script setup>
-import TopNav from '~/components/common/TopNav';
+import DashboardOverview from '~/components/dashboard/DashboardOverview';
+import Market from '~/components/dashboard/Market';
 </script>

@@ -1,4 +1,5 @@
 import { ref, onMounted, onUnmounted } from 'vue';
+const dropdown = ref(null);
 
 export function useDropdown() {
   const isDropdownVisible = ref(false);
@@ -7,8 +8,10 @@ export function useDropdown() {
     isDropdownVisible.value = !isDropdownVisible.value;
   };
 
-  const handleClickOutside = () => {
-    isDropdownVisible.value = false;
+  const handleClickOutside = (event) => {
+    if (dropdown.value && !dropdown.value.contains(event.target)) {
+      isDropdownVisible.value = false;
+    }
   };
 
   onMounted(() => document.addEventListener('click', handleClickOutside));

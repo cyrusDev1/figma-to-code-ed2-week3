@@ -1,5 +1,7 @@
 <template>
-  <div class="fixed h-full w-60 py-7 px-4 border-r flex flex-col border-gray">
+  <div
+    class="py-7 px-4 border-r flex flex-col border-gray dark:border-opacity-15"
+  >
     <div class="flex-1">
       <div>
         <Logo></Logo>
