@@ -7,6 +7,9 @@ export const useNewsAPI = () => {
   const fetchLatestCryptoNews = async () => {
     try {
       const response = await axios.get(baseURL, {
+        headers: {
+          'Upgrade-Insecure-Requests': '1',
+        },
         params: {
           q: 'cryptocurrency',
           apiKey: apiKey,
