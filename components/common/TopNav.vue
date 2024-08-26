@@ -1,7 +1,13 @@
 <template>
-  <div class="px-6 py-3 border-b border-light-gray dark:border-opacity-15">
-    <div class="flex justify-between">
-      <div class="flex space-x-8">
+  <div class="px-5 py-3 border-b border-light-gray dark:border-opacity-15">
+    <div class="flex space-x-1 justify-between items-center">
+      <div class="flex space-x-1 md:space-x-8 items-center">
+        <div
+          @click="openMenu"
+          class="xl:hidden cursor-pointer border border-gray dark:border-opacity-15 p-2 flex items-center justify-center rounded-xl"
+        >
+          <Icon class="text-3xl text-dark-gray" name="uil:bars"></Icon>
+        </div>
         <div>
           <h3 class="text-black font-semibold text-sm dark:text-gray">
             Dashboard
@@ -10,7 +16,7 @@
             Welcome back, Jonh Doe
           </p>
         </div>
-        <div>
+        <div class="hidden xl:block">
           <Link
             to="/"
             class="text-white bg-blue py-2 px-5 flex space-x-2 text-sm font-medium items-center"
@@ -21,7 +27,7 @@
         </div>
       </div>
       <div class="flex space-x-3">
-        <div class="relative">
+        <div class="hidden sm:block relative">
           <div
             @click="toggleDropdown"
             class="rounded-xl text-dark-gray flex items-center space-x-1 border border-gray py-2 px-5 cursor-pointer dark:text-gray dark:border-opacity-15"
@@ -37,6 +43,7 @@
             <ul>
               <li
                 v-for="i in 4"
+                :key="i"
                 class="cursor-pointer text-dark-gray dark:text-light-gray py-1"
               >
                 OPT
@@ -49,10 +56,17 @@
     </div>
   </div>
 </template>
+
 <script setup>
 import Link from '~/components/ui/Link';
 import ToogleDarkMode from '~/components/ui/ToogleDarkMode';
 import { useDropdown } from '~/composables/useDropdown';
 
+const emit = defineEmits(['open']);
+
 const { isDropdownVisible, toggleDropdown } = useDropdown();
+
+const openMenu = () => {
+  emit('open');
+};
 </script>

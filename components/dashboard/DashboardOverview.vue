@@ -1,5 +1,5 @@
 <template>
-  <div class="m-6 flex space-x-6">
+  <div class="m-5 lg:flex space-y-6 lg:space-x-6 lg:space-y-0">
     <Balance></Balance>
     <Trending></Trending>
   </div>

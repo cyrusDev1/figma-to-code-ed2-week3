@@ -14,34 +14,37 @@
       </div>
     </div>
     <div>
-      <table class="w-full">
-        <thead>
-          <tr
-            class="bg-light-gray text-dark font-medium dark:bg-opacity-10 dark:text-light-gray"
-          >
-            <td class="py-3 px-6"></td>
-            <td class="py-3 px-6">#</td>
-            <td class="py-3 px-6">Coins</td>
-            <td class="py-3 px-6">Price</td>
-            <td class="py-3 px-6">24h</td>
-            <td class="py-3 px-6">24h Volume</td>
-            <td class="py-3 px-6">Market Cap</td>
-            <td class="py-3 px-6">Last 7 days</td>
-          </tr>
-        </thead>
-        <tbody>
-          <MarketDataItem
-            v-for="market in marketData"
-            :market="market"
-            @coinView="openPopup"
-          ></MarketDataItem>
-          <PopUpCoin
-            v-if="activeMarket"
-            :market="activeMarket"
-            @close="activeMarket = null"
-          />
-        </tbody>
-      </table>
+      <div class="overflow-x-auto">
+        <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+          <thead>
+            <tr
+              class="bg-light-gray text-dark font-medium dark:bg-opacity-10 dark:text-light-gray"
+            >
+              <td class="py-3 px-6"></td>
+              <td class="py-3 px-6">#</td>
+              <td class="py-3 px-6">Coins</td>
+              <td class="py-3 px-6">Price</td>
+              <td class="py-3 px-6">24h</td>
+              <td class="py-3 px-6">24h Volume</td>
+              <td class="py-3 px-6">Market Cap</td>
+              <td class="py-3 px-6">Last 7 days</td>
+            </tr>
+          </thead>
+          <tbody>
+            <MarketDataItem
+              v-for="market in marketData"
+              :key="market.id"
+              :market="market"
+              @coinView="openPopup"
+            ></MarketDataItem>
+            <PopUpCoin
+              v-if="activeMarket"
+              :market="activeMarket"
+              @close="activeMarket = null"
+            />
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </template>

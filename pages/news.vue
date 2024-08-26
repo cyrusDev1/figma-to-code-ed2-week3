@@ -1,5 +1,5 @@
 <template>
-  <div v-if="posts" class="p-6 space-y-9">
+  <div v-if="posts" class="p-5 space-y-9">
     <h2 class="text-dark font-semibold text-base dark:text-light-gray">
       Latest crypto news
     </h2>

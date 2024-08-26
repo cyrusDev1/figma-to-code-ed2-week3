@@ -9,7 +9,7 @@ export function useDropdown() {
   };
 
   const handleClickOutside = (event) => {
-    if (dropdown.value && !dropdown.value.contains(event.target)) {
+    if (dropdown.value && !dropdown.value.$el.contains(event.target)) {
       isDropdownVisible.value = false;
     }
   };

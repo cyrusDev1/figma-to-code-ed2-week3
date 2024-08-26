@@ -17,17 +17,17 @@
           >
         </div>
       </div>
-      <div class="flex space-x-2">
+      <div class="w-full sm:flex space-y-2 sm:space-x-2 sm:space-y-0">
         <Link
           to="/"
-          class="py-2 px-8 flex space-x-2 items-center bg-blue bg-opacity-5"
+          class="w-full py-2 px-8 flex space-x-2 justify-center items-center bg-blue bg-opacity-5"
         >
           <Icon class="text-blue text-2xl" name="mdi:arrow-top"></Icon>
           <span class="text-blue text-sm font-medium">Deposit</span>
         </Link>
         <Link
           to="/"
-          class="py-2 px-8 flex space-x-2 items-center bg-blue bg-opacity-5"
+          class="w-full py-2 px-8 flex space-x-2 justify-center items-center bg-blue bg-opacity-5"
         >
           <Icon class="text-blue text-2xl" name="mdi:arrow-down"></Icon>
           <span class="text-blue text-sm font-medium">Withdraw</span>

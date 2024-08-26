@@ -12,7 +12,10 @@
         <Icon class="size-4" name="material-symbols:chevron-right"></Icon>
       </Link>
     </div>
-    <div v-if="trendings" class="grid grid-cols-4 gap-2">
+    <div
+      v-if="trendings"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2"
+    >
       <TrendingItem
         v-for="trending in trendings.splice(0, 4)"
         :trending="trending.item"

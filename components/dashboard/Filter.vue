@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between">
+  <div class="md:flex justify-between space-y-2 md:space-y-0">
     <div
       class="border border-gray rounded-xl py-3 px-5 flex items-center space-x-2 dark:border-opacity-15"
     >
@@ -10,7 +10,7 @@
         placeholder="Search crypto"
       />
     </div>
-    <div class="w-60 relative">
+    <div class="w-full md:w-60 relative">
       <div
         @click="toggleDropdown"
         class="cursor-pointer border border-gray rounded-xl py-3 px-5 flex items-center justify-between dark:border-opacity-15"
@@ -21,7 +21,7 @@
       <div
         v-if="isDropdownVisible"
         ref="dropdown"
-        class="absolute w-60 mt-1 z-40 border border-gray rounded-xl px-5 bg-white dark:border-opacity-15 dark:bg-dark-blue-1"
+        class="absolute w-full md:w-60 mt-1 z-40 border border-gray rounded-xl px-5 bg-white dark:border-opacity-15 dark:bg-dark-blue-1"
       >
         <ul>
           <li
