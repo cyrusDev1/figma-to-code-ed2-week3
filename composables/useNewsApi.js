@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const useNewsAPI = () => {
   const apiKey = '74d7b41f5c1b4dc589ba95c44d3c88fd';
-  const baseURL = 'https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything';
+  const baseURL = 'https://proxy-cors.herokuapp.com/https://newsapi.org/v2/everything';
 
   const fetchLatestCryptoNews = async () => {
     try {
