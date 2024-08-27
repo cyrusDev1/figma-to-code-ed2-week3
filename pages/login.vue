@@ -16,14 +16,14 @@
           <div>
             <label
               for="email"
-              class="block mb-2 text-sm font-medium text-dark-blue-1"
+              class="block mb-2 text-sm font-medium text-dark-blue-1 dark:text-white"
               >Your email</label
             >
             <input
               type="email"
               name="email"
               id="email"
-              class="bg-gray-50 border border-gray text-dark-blue-1 rounded-lg focus:ring-blue focus:border-blue block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              class="bg-gray-50 border border-gray text-dark-blue-1 rounded-lg focus:ring-blue focus:border-blue block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="name@company.com"
               required=""
             />
@@ -31,7 +31,7 @@
           <div>
             <label
               for="password"
-              class="block mb-2 text-sm font-medium text-dark-blue-1"
+              class="block mb-2 text-sm font-medium text-dark-blue-1 dark:text-white"
               >Password</label
             >
             <input
@@ -39,7 +39,7 @@
               name="password"
               id="password"
               placeholder="••••••••"
-              class="bg-gray-50 border border-gray text-dark-blue-1 rounded-lg focus:ring-blue focus:border-blue block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              class="bg-gray-50 border border-gray text-dark-blue-1 rounded-lg focus:ring-blue focus:border-blue block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
               required=""
             />
           </div>
