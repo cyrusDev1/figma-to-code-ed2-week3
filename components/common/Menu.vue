@@ -53,6 +53,7 @@ const links = ref([
   { text: 'Invoices', icon: 'hugeicons:invoice-01', to: '#' },
   { text: 'Help Center', icon: 'iconamoon:headphone', to: '#' },
   { text: 'Settings', icon: 'ic:outline-settings', to: '#' },
+  { text: 'Logout', icon: 'material-symbols:logout', to: '/login' },
 ]);
 
 const linkClasses = (link) => {
