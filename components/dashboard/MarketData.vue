@@ -20,14 +20,14 @@
             <tr
               class="bg-light-gray text-dark font-medium dark:bg-opacity-10 dark:text-light-gray"
             >
-              <td class="py-3 px-6"></td>
-              <td class="py-3 px-6">#</td>
-              <td class="py-3 px-6">Coins</td>
-              <td class="py-3 px-6">Price</td>
-              <td class="py-3 px-6">24h</td>
-              <td class="py-3 px-6">24h Volume</td>
-              <td class="py-3 px-6">Market Cap</td>
-              <td class="py-3 px-6">Last 7 days</td>
+              <td class="py-3 px-6 text-nowrap"></td>
+              <td class="py-3 px-6 text-nowrap">#</td>
+              <td class="py-3 px-6 text-nowrap">Coins</td>
+              <td class="py-3 px-6 text-nowrap">Price</td>
+              <td class="py-3 px-6 text-nowrap">24h</td>
+              <td class="py-3 px-6 text-nowrap">24h Volume</td>
+              <td class="py-3 px-6 text-nowrap">Market Cap</td>
+              <td class="py-3 px-6 text-nowrap">Last 7 days</td>
             </tr>
           </thead>
           <tbody>

@@ -12,7 +12,9 @@
       class="absolute lg:flex overflow-auto z-50 bg-white h-full top-0 left-0 w-60 dark:bg-dark-blue-1"
     ></SideBar>
     <div class="lg:ml-60 relative flex-1 w-full overflow-y-auto">
-      <TopNav ref="topnav" @open="openMenu"></TopNav>
+      <div class="">
+        <TopNav ref="topnav" @open="openMenu"></TopNav>
+      </div>
       <div>
         <slot></slot>
       </div>

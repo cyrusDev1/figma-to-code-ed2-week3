@@ -8,31 +8,27 @@
         class="cursor-pointer block size-8 rounded-full bg-blue"
       />
       <div class="flex flex-col">
-        <span class="text-dark font-semibold text-xs dark:text-white">{{
-          post.author
-        }}</span>
+        <span class="text-dark font-semibold text-xs dark:text-white"
+          >CoinMarketCap</span
+        >
         <span class="text-dark-gray text-xs dark:text-light-gray"
-          >{{ post.source.name }} - {{ timeAgo(post.publishedAt) }}</span
+          >News - 7 days ago</span
         >
       </div>
     </div>
-    <div>
-      <Link class="block" :to="post.url" target="_blank">
-        <img
-          :src="post.urlToImage"
-          class="cursor-pointer object-cover border border-light-gray w-full h-48 rounded-lg dark:border-opacity-15"
-        />
-      </Link>
-    </div>
+    <div
+      class="cursor-pointer object-cover border border-light-gray w-full h-48 rounded-lg dark:border-opacity-15"
+    ></div>
 
     <div class="space-y-2">
       <h4
         class="text-dark font-semibold text-xs italic cursor-pointer dark:text-gray"
       >
-        {{ post.title }}
+        Ethereum’s Merge Coming and the Stakes Couldn’t Be Higher
       </h4>
       <p class="text-dark-gray font-medium text-xs dark:text-white">
-        {{ post.description }}
+        The most important upgrade in blockchain history is slated for August.
+        And the outcome of Ethe....
       </p>
       <div class="flex space-x-2">
         <div
@@ -57,10 +53,10 @@
 <script setup>
 import { computed, defineProps } from 'vue';
 import Link from './ui/Link.vue';
-const props = defineProps({
+/*const props = defineProps({
   post: {
     type: Array,
-    required: true,
+    required: false,
   },
 });
 const timeAgo = (dateString) => {
@@ -84,5 +80,5 @@ const timeAgo = (dateString) => {
   if (minutes > 1) return `${minutes} minutes ago`;
 
   return `${Math.floor(seconds)} seconds ago`;
-};
+};*/
 </script>

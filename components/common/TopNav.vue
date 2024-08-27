@@ -1,14 +1,14 @@
 <template>
-  <div class="px-5 py-3 border-b border-light-gray dark:border-opacity-15">
+  <div class="py-3 px-5 border-b border-light-gray dark:border-opacity-15">
     <div class="flex space-x-1 justify-between items-center">
-      <div class="flex space-x-1 md:space-x-8 items-center">
+      <div class="flex items-center">
         <div
           @click="openMenu"
-          class="xl:hidden cursor-pointer border border-gray dark:border-opacity-15 p-2 flex items-center justify-center rounded-xl"
+          class="md:mr-8 flex xl:hidden cursor-pointer border border-gray dark:border-opacity-15 p-2 items-center justify-center rounded-xl"
         >
           <Icon class="text-3xl text-dark-gray" name="uil:bars"></Icon>
         </div>
-        <div>
+        <div class="md:mr-8">
           <h3 class="text-black font-semibold text-sm dark:text-gray">
             Dashboard
           </h3>

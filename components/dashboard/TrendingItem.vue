@@ -7,7 +7,7 @@
         <img class="size-8" :src="trending.thumb" />
         <div class="flex flex-col">
           <span class="font-bold text-xs text-dark-gray dark:text-white">{{
-            trending.name
+            truncateText(trending.name)
           }}</span>
           <span
             class="font-bold text-xxs opacity-60 text-dark-gray dark:text-gray"
@@ -36,6 +36,7 @@
 <script setup>
 import TrendPercentage from '~/components/ui/TrendPercentage';
 import { computed, defineProps } from 'vue';
+import { formatDollarAmount, truncateText } from '~/utils/format';
 
 const props = defineProps({
   trending: {

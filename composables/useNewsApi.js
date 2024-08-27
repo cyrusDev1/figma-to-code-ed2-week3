@@ -2,14 +2,11 @@ import axios from 'axios';
 
 export const useNewsAPI = () => {
   const apiKey = '74d7b41f5c1b4dc589ba95c44d3c88fd';
-  const baseURL = 'https://proxy-cors.herokuapp.com/https://newsapi.org/v2/everything';
+  const baseURL = 'https://newsapi.org/v2/everything';
 
   const fetchLatestCryptoNews = async () => {
     try {
       const response = await axios.get(baseURL, {
-        headers: {
-          'Upgrade-Insecure-Requests': '1',
-        },
         params: {
           q: 'cryptocurrency',
           apiKey: apiKey,

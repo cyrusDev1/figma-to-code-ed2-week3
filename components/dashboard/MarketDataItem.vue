@@ -19,13 +19,13 @@
     </td>
     <td
       @click="openCoin"
-      class="py-4 px-6 text-dark font-medium flex items-center space-x-1 text-sm dark:text-white cursor-pointer"
+      class="py-4 px-6 text-nowrap text-dark font-medium flex items-center space-x-1 text-sm dark:text-white cursor-pointer"
     >
       <img class="size-6 object-cover" :src="market.image" alt="" />
       <span>{{ market.name }}</span>
     </td>
     <td class="py-4 px-6 text-dark font-medium text-sm dark:text-white">
-      ${{ market.current_price }}
+      {{ formatDollarAmount(market.current_price) }}
     </td>
     <td class="py-4 px-6 text-dark font-medium text-sm dark:text-white">
       <TrendPercentage
@@ -34,10 +34,10 @@
       />
     </td>
     <td class="py-4 px-6 text-dark font-medium text-sm dark:text-white">
-      ${{ market.total_volume }}
+      {{ formatDollarAmount(market.total_volume) }}
     </td>
     <td class="py-4 px-6 text-dark font-medium text-sm dark:text-white">
-      ${{ market.market_cap }}
+      {{ formatDollarAmount(market.market_cap) }}
     </td>
     <td class="py-4 px-6 text-dark font-medium text-sm dark:text-white">
       <img
@@ -53,6 +53,7 @@
 <script setup>
 import { ref } from 'vue';
 import TrendPercentage from '../ui/TrendPercentage.vue';
+import { formatDollarAmount } from '~/utils/format.js';
 
 const favorites = ref([]);
 

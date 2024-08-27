@@ -30,7 +30,9 @@
             <img class="size-6 object-cover" :src="market.image" alt="" />
             <span class="dark:text-light-gray">{{ market.name }}</span>
           </h3>
-          <h3 class="dark:text-light-gray">$82222</h3>
+          <h3 class="dark:text-light-gray">
+            {{ formatDollarAmount(market.current_price) }}
+          </h3>
         </div>
         <div class="space-y-1">
           <div class="flex justify-between items-center">
@@ -48,7 +50,7 @@
               Market cap
             </h4>
             <h4 class="font-medium text-dark-gray text-sm dark:text-gray">
-              ${{ market.market_cap }}
+              {{ formatDollarAmount(market.market_cap) }}
             </h4>
           </div>
           <div class="flex justify-between items-center">
@@ -56,7 +58,7 @@
               Circulating supply
             </h4>
             <h4 class="font-medium text-dark-gray text-sm dark:text-gray">
-              ${{ market.total_supply }}
+              {{ formatDollarAmount(market.total_supply) }}
             </h4>
           </div>
           <div class="flex justify-between items-center">
@@ -64,7 +66,7 @@
               24 Hour High
             </h4>
             <h4 class="font-medium text-dark-gray text-sm dark:text-gray">
-              ${{ market.low_24h }}
+              {{ formatDollarAmount(market.low_24h) }}
             </h4>
           </div>
           <div class="flex justify-between items-center">
@@ -72,7 +74,7 @@
               24 Hour Low
             </h4>
             <h4 class="font-medium text-dark-gray text-sm dark:text-gray">
-              ${{ market.high_24h }}
+              {{ formatDollarAmount(market.high_24h) }}
             </h4>
           </div>
         </div>
@@ -108,6 +110,7 @@
 </template>
 <script setup>
 import Link from '~/components/ui/Link';
+import { formatDollarAmount, truncateText } from '~/utils/format';
 
 const props = defineProps({
   market: {
