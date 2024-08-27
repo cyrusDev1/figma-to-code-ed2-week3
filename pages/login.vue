@@ -16,7 +16,7 @@
           <div>
             <label
               for="email"
-              class="block mb-2 text-sm font-medium text-dark-blue-1 dark:text-white"
+              class="block mb-2 text-sm font-medium text-dark-blue-1"
               >Your email</label
             >
             <input
@@ -31,7 +31,7 @@
           <div>
             <label
               for="password"
-              class="block mb-2 text-sm font-medium text-dark-blue-1 dark:text-white"
+              class="block mb-2 text-sm font-medium text-dark-blue-1"
               >Password</label
             >
             <input
